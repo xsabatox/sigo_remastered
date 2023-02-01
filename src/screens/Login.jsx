@@ -9,7 +9,7 @@ COMPONENT
 export const Login = () => {
   return (
     <View style={styles.container}>
-      <Text>Hello World</Text>
+      <Text>Login</Text>
     </View>
   );
 };
