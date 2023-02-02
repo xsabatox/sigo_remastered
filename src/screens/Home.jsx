@@ -6,13 +6,13 @@ import {Text, View, StyleSheet, Button} from 'react-native';
 /********************************************************************************
 COMPONENT
 ********************************************************************************/
-export function Login({ navigation }) {
+export function Home({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>Login</Text>
+      <Text>Home</Text>
       <Button
-        title='Home'
-        onPress={() => navigation.navigate('Home')}
+        title='Login'
+        onPress={() => navigation.navigate('Login')}
       />
     </View>
   );

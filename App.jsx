@@ -1,11 +1,16 @@
+/********************************************************************************
+DEPENDENCIES
+********************************************************************************/
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Login } from './src/screens/Login';
+import { StackRoutes } from './src/routes/stack.routes';
 
+/********************************************************************************
+COMPONENT
+********************************************************************************/
 export default function App() {
   return (
     <NavigationContainer>
-      <Login />
+      <StackRoutes />
     </NavigationContainer>
   );
 }
