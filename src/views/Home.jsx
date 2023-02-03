@@ -1,7 +1,8 @@
 /********************************************************************************
 DEPENDENCIES
 ********************************************************************************/
-import {Text, View, StyleSheet, Button} from 'react-native';
+import { Text, View, Button } from 'react-native';
+import { styles } from '../constants/Styles';
 
 /********************************************************************************
 COMPONENT
@@ -21,6 +22,7 @@ export function Home({ navigation }) {
 /********************************************************************************
 STYLESHEET
 ********************************************************************************/
+/*
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -29,3 +31,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   }
 });
+*/
