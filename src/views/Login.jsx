@@ -1,7 +1,8 @@
 /********************************************************************************
 DEPENDENCIES
 ********************************************************************************/
-import {Text, View, StyleSheet, Button} from 'react-native';
+import { Pressable, Text, View  } from 'react-native';
+import { styles } from '../constants/Styles';
 
 /********************************************************************************
 COMPONENT
@@ -9,23 +10,14 @@ COMPONENT
 export function Login({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>Login</Text>
-      <Button
-        title='Home'
+      <Text style={styles.regularText}>
+        Login</Text>
+      <Pressable 
         onPress={() => navigation.navigate('Home')}
-      />
+        style={styles.button}>
+        <Text style={styles.boldText}>
+          Home</Text>
+      </Pressable>
     </View>
   );
 };
-
-/********************************************************************************
-STYLESHEET
-********************************************************************************/
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'black',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-});
