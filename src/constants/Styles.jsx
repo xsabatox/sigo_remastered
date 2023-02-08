@@ -16,6 +16,33 @@ export const styles = StyleSheet.create({
       flex: 1,
       justifyContent: 'center'
     },
+
+    regularText: {
+      color: colors.white,
+      fontFamily: 'Montserrat-Regular',
+      fontSize: 24,
+      fontWeight: 'normal'
+    },
+
+    boldText: {
+      color: colors.white,
+      fontFamily: 'Montserrat-Regular',
+      fontSize: 24,
+      fontWeight: 'bold'
+    },
+
+    input: {
+      backgroundColor: colors.darkgray,
+      borderRadius: 10,
+      color: colors.lightgray,
+      fontSize: 16,
+      fontFamily: 'Montserrat-Regular',
+      height: 70,
+      marginBottom: 10,
+      padding: 12,
+      width: '80%' 
+    },
+
     button: {
       alignItems: 'center',
       backgroundColor: colors.cyan,
@@ -24,16 +51,5 @@ export const styles = StyleSheet.create({
       justifyContent: 'center',
       width: '80%'
     },
-    regularText: {
-      color: colors.white,
-      fontFamily: 'Montserrat-Regular',
-      fontSize: 24,
-      fontWeight: 'normal'
-    },
-    boldText: {
-      color: colors.white,
-      fontFamily: 'Montserrat-Regular',
-      fontSize: 24,
-      fontWeight: 'bold'
-    },
+
   });
