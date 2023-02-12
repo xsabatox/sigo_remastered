@@ -8,9 +8,9 @@ import { StackRoutes } from "./stack.routes";
 COMPONENT
 ********************************************************************************/
 export function Routes() {
-    return (
-        <NavigationContainer>
-            <StackRoutes />
-        </NavigationContainer>
-    )
+  return (
+    <NavigationContainer>
+      <StackRoutes />
+    </NavigationContainer>
+  )
 };

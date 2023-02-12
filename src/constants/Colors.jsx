@@ -2,10 +2,11 @@
 COMPONENT
 ********************************************************************************/
 export const colors = {
-    black: '#000000',
-    darkgray: '#1E1E1E',
+    black: '#121212',
     cyan: '#00B2CB',
+    darkgray: '#1E1E1E',
+    gray: '#808080',
+    lightgray: '#AAAAAA',
     red: '#990000',
-    lightgray: '#C8C8C8',
-    white: '#FFFFFF'
+    white: '#FFF'
   };
