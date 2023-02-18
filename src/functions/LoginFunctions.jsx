@@ -1,8 +1,8 @@
 /********************************************************************************
 DEPENDENCIES
 ********************************************************************************/
-import { auth } from '@react-native-firebase/auth';
-import { Toast }  from 'react-native-simple-toast';
+import auth from '@react-native-firebase/auth';
+import Toast from 'react-native-simple-toast';
 
 /********************************************************************************
 FUNCTIONS
@@ -44,7 +44,7 @@ HANDLE FORGOT PASSWORD redefines the user's password sending a link to a user
 defined account email, using Google's Firebase Authentication service. 
 More info at https://firebase.google.com/docs/auth.
 ********************************************************************************/
-export function handleForgotPassword() {
+export function handleForgotPassword(email) {
   if (email === '')
     return Toast.show('Preencha o campo para redefinir sua senha.');
   auth()

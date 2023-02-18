@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { Modal, Pressable, StatusBar, Text, TextInput, View } from 'react-native';
 import { handleLogin, handleForgotPassword } from '../functions/LoginFunctions';
 import { colors } from '../constants/Colors';
-import { styles } from '../constants/Styles';
+import { styles, modalStyles } from '../constants/Styles';
 
 /********************************************************************************
 BEGIN COMPONENT
@@ -46,29 +46,34 @@ const [ modalVisible, setModalVisible ] = useState(false);
 				keyboardType='default'
 				secureTextEntry={true}
 			/>
-			<Pressable onPress={() => setModalVisible(!modalVisible)}>
+      <View style={{ 
+        flexDirection: 'row',
+        marginTop: 60,
+      }}>
+        <Pressable 
+          //onPress={handleLogin}
+          onPress={() => navigation.navigate('Home')}
+          style={styles.button}>
+          <Text 
+            style={styles.boldText}>
+            Entrar
+          </Text>
+        </Pressable>
+        <Pressable 
+          onPress={() => navigation.navigate('Home')}
+          style={styles.button}>
+          <Text 
+            style={styles.boldText}>
+            Registrar
+          </Text>
+        </Pressable>
+      </View>
+      <Pressable onPress={() => setModalVisible(!modalVisible)}>
         <Text 
 					style={styles.link}>
 					Esqueceu a senha?
 				</Text>
       </Pressable>
-			<Pressable 
-				//onPress={handleLogin}
-				onPress={() => navigation.navigate('Home')}
-				style={styles.button}>
-				<Text 
-					style={styles.boldText}>
-					Entrar
-				</Text>
-			</Pressable>
-			<Pressable 
-				onPress={() => navigation.navigate('Home')}
-				style={styles.button}>
-				<Text 
-					style={styles.boldText}>
-					Registrar
-				</Text>
-			</Pressable>
 			<Modal
         animationType='slide'
         visible={modalVisible}
@@ -76,17 +81,13 @@ const [ modalVisible, setModalVisible ] = useState(false);
         onRequestClose={() => {
           setModalVisible(!modalVisible);
       }}>
-        <View style={styles.modalContainer}>
-          <StatusBar 
-						barStyle='light-content' 
-						backgroundColor={colors.black}
-					/>
+        <View style={modalStyles.container}>
 					<Text 
-						style={styles.boldText}>
+						style={modalStyles.title}>
 							Esqueci minha senha
 					</Text>
           <Text 
-						style={styles.regularText}>
+						style={modalStyles.text}>
               Preencha o campo abaixo com seu e-mail {'\n'} 
 							para recuperar a sua senha:
           </Text>
@@ -102,13 +103,13 @@ const [ modalVisible, setModalVisible ] = useState(false);
 					</TextInput>
 					<Pressable
 						onPress={() => {
-							handleForgotPassword();
+							handleForgotPassword(email);
 							setModalVisible(!modalVisible);
 						}}
 						style={styles.button}>
 						<Text 
 							style={styles.boldText}>
-							Recuperar acesso
+							Recuperar
 						</Text>
 					</Pressable>
         </View>

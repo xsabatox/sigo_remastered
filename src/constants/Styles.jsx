@@ -17,35 +17,26 @@ export const styles = StyleSheet.create({
     justifyContent: 'center'
   },
 
-  modalContainer: {
-    alignItems: 'center',
-    backgroundColor: colors.darkgray,
-    borderRadius: 25,
-    height: 350,
-    justifyContent: 'center',
-    marginTop: 'auto',
-    paddingVertical: 24,
-    width: '100%'
-  },
-
   regularText: {
     color: colors.white,
     fontFamily: 'Montserrat-Regular',
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'normal'
   },
 
   boldText: {
     color: colors.white,
     fontFamily: 'Montserrat-Regular',
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold'
   },
 
   link: {
     color: colors.cyan,
     fontFamily: 'Montserrat-Regular',
-    fontSize: 24,
+    fontSize: 16,
+    marginBottom: 10,
+    marginTop: 10,
     textDecorationLine: 'underline'
   },
 
@@ -56,7 +47,8 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: 'Montserrat-Regular',
     height: 70,
-    marginBottom: 10,
+    marginBottom: 5,
+    marginTop: 5,
     padding: 12,
     width: '90%' 
   },
@@ -65,8 +57,39 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: colors.cyan,
     borderRadius: 10,
-    height: 80,
+    height: 50,
     justifyContent: 'center',
-    width: '80%'
+    marginBottom: 5,
+    marginLeft: 5,
+    marginRight: 5,
+    marginTop: 5,
+    width: '40%'
+  }
+});
+
+export const modalStyles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    backgroundColor: colors.black,
+    borderRadius: 25,
+    height: 350,
+    justifyContent: 'center',
+    marginTop: 'auto',
+    paddingVertical: 24,
+    width: '100%'
+  },
+
+  title:  {
+    color: colors.cyan,
+    fontFamily: 'Montserrat-Bold',
+    fontSize: 25
+  },
+
+  text:  {
+    color: colors.white,
+    fontFamily: 'Montserrat-Regular',
+    fontSize: 15,
+    marginBottom: 20,
+    textAlign: 'center'
   }
 });

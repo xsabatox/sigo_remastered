@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "580354851671",
+    "project_id": "sigo-remastered",
+    "storage_bucket": "sigo-remastered.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580354851671:android:a98373f2d5661914243412",
+        "android_client_info": {
+          "package_name": "com.sigo_remastered"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "580354851671-1uq8hsh37qomia6oo0vg81spk70je1cg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZhCh8rjQbFoq8mY24zOrp5Z9NoLVyat8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "580354851671-1uq8hsh37qomia6oo0vg81spk70je1cg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
