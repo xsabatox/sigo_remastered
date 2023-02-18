@@ -11,17 +11,17 @@ FUNCTIONS
 /********************************************************************************
 HANDLE LOGIN authenticates the user to the app, using Google's Firebase 
 Authentication service.
-More info at https://firebase.google.com/docs/auth.
+More info at https://rnfirebase.io/reference/auth.
 ********************************************************************************/
-export function handleLogin() {
+export function handleLogin(email, password) {
 	if (email === '' || password === '')
 		return Toast.show('Preencha todos os campos para se autenticar.');
 	auth()
 		.signInWithEmailAndPassword(email, password)
 		.then(() => {
 			navigate('Home');
-			setEmail('');
-			setPassword('');
+			//setEmail('');
+			//setPassword('');
 		})
 		.catch((error) => {
 			if (
@@ -42,7 +42,7 @@ export function handleLogin() {
 /********************************************************************************
 HANDLE FORGOT PASSWORD redefines the user's password sending a link to a user
 defined account email, using Google's Firebase Authentication service. 
-More info at https://firebase.google.com/docs/auth.
+More info at https://rnfirebase.io/reference/auth.
 ********************************************************************************/
 export function handleForgotPassword(email) {
   if (email === '')

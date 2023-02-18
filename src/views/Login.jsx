@@ -10,7 +10,7 @@ import { styles, modalStyles } from '../constants/Styles';
 /********************************************************************************
 BEGIN COMPONENT
 ********************************************************************************/
-export function Login({ navigation }) {
+export function Login({navigation}) {
 
 /********************************************************************************
 STATES
@@ -51,8 +51,8 @@ const [ modalVisible, setModalVisible ] = useState(false);
         marginTop: 60,
       }}>
         <Pressable 
-          //onPress={handleLogin}
-          onPress={() => navigation.navigate('Home')}
+          onPress={handleLogin(email, password)}
+          //onPress={() => navigation.navigate('Home')}
           style={styles.button}>
           <Text 
             style={styles.boldText}>

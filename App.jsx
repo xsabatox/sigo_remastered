@@ -1,16 +1,16 @@
 /********************************************************************************
 DEPENDENCIES
 ********************************************************************************/
-import { NavigationContainer } from '@react-navigation/native';
-import { StackRoutes } from './src/routes/stack.routes';
+import { AuthProvider } from './src/components/AuthContext';
+import { Routes } from './src/routes/index';
 
 /********************************************************************************
 COMPONENT
 ********************************************************************************/
 export default function App() {
   return (
-    <NavigationContainer>
-      <StackRoutes />
-    </NavigationContainer>
+    <AuthProvider>
+      <Routes />
+    </AuthProvider>
   );
 }
