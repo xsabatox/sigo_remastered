@@ -3,9 +3,10 @@ DEPENDENCIES
 ********************************************************************************/
 import { useEffect, useState } from 'react';
 import { Modal, Pressable, StatusBar, Text, TextInput, View } from 'react-native';
-import { handleLogin, handleForgotPassword } from '../functions/LoginFunctions';
+import { handleLogin } from '../functions/LoginFunctions';
 import { colors } from '../constants/Colors';
 import { styles, modalStyles } from '../constants/Styles';
+import Toast from 'react-native-simple-toast';
 
 /********************************************************************************
 BEGIN COMPONENT
@@ -51,8 +52,7 @@ const [ modalVisible, setModalVisible ] = useState(false);
         marginTop: 60,
       }}>
         <Pressable 
-          onPress={handleLogin(email, password)}
-          //onPress={() => navigation.navigate('Home')}
+          onPress={() => handleLogin(email, password, navigation)}
           style={styles.button}>
           <Text 
             style={styles.boldText}>
@@ -71,8 +71,8 @@ const [ modalVisible, setModalVisible ] = useState(false);
       <Pressable onPress={() => setModalVisible(!modalVisible)}>
         <Text 
 					style={styles.link}>
-					Esqueceu a senha?
-				</Text>
+		Esqueceu a senha?
+		</Text>
       </Pressable>
 			<Modal
         animationType='slide'
