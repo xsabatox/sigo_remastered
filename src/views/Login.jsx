@@ -1,9 +1,9 @@
 /********************************************************************************
 DEPENDENCIES
 ********************************************************************************/
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Pressable, StatusBar, Text, TextInput, View } from 'react-native';
-import AuthContext from '../components/AuthContext';
+import { AuthContext } from '../components/AuthContext';
 import { authLogin } from '../functions/AuthLogin';
 import { colors } from '../constants/Colors';
 import { styles } from '../constants/Styles';
@@ -11,8 +11,13 @@ import { styles } from '../constants/Styles';
 /********************************************************************************
 BEGIN COMPONENT
 ********************************************************************************/
-export function Login({navigation}) {
+export function Login({ navigation }) {
+
 	const {user} = useContext(AuthContext);
+
+	useEffect(() => {
+		if (user) navigation.navigate('Home');
+	}, [user]);
 
 /********************************************************************************
 STATES
@@ -49,7 +54,7 @@ STATES
 			/>
       <View style={{ 
         flexDirection: 'row',
-        marginTop: 60}}>
+        marginTop: 25}}>
         <Pressable 
           onPress={() => 
 						authLogin(

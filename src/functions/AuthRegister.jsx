@@ -9,9 +9,15 @@ AUTH REGISTER creates an new user passing an email and password to Google's
 Firebase Authentication service.
 More info at https://rnfirebase.io/reference/auth.
 ********************************************************************************/
-export async function authRegister(email, password, confirmPassword) {
-	if (password !== confirmPassword) {
-		return Alert.alert('Senhas não correspondem.');
+export async function authRegister(firstName, lastName, email, password, confirmPassword) {
+  if (firstName === '') {
+    return Alert.alert('Erro', 'Preencha o nome.');
+  } else if (lastName === '') {
+    return Alert.alert('Erro', 'Preencha o sobrenome.');
+  } else if (email === '') {
+    return Alert.alert('Erro', 'Preencha o e-mail.');
+  } else if (password !== confirmPassword) {
+		return Alert.alert('Erro', 'Senhas não correspondem.');
   } else {
     await auth()
       .createUserWithEmailAndPassword(email, password)

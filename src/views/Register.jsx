@@ -10,7 +10,7 @@ import { styles } from '../constants/Styles';
 /********************************************************************************
 BEGIN COMPONENT
 ********************************************************************************/
-export function Register({navigation}) {
+export function Register() {
 
 /********************************************************************************
 STATES
@@ -80,7 +80,9 @@ STATES
       <Pressable 
         onPress={() => 
           authRegister(
-            email, 
+            firstName,
+						lastName,
+						email, 
             password, 
             confirmPassword)}
         style={styles.button}>

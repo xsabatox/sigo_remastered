@@ -8,13 +8,13 @@ import auth from "@react-native-firebase/auth";
 BEGIN COMPONENT
 ********************************************************************************/
 export const AuthContext = createContext();
-export function AuthProvider({children}) {
+export function AuthProvider({ children }) {
 
 /********************************************************************************
 STATES
 ********************************************************************************/
   const [user, setUser] = useState();
-  //const [update, setUpdate] = useState(false);
+  const [update, setUpdate] = useState(false);
 
 /********************************************************************************
 USE EFFECT passes ON USER CHANGED to retrieve the user value from Google's 
@@ -24,22 +24,22 @@ More info at https://rnfirebase.io/reference/auth.
   useEffect(() => {
     auth().onUserChanged(user => {
       setUser(user);
-    })
-  },[user])
+    });
+  },[user]);
 
 /********************************************************************************
-AUTH PROVIDER provides a set of variables' values to all its children elements 
-on the APP component. 
+AUTH CONTEXT PROVIDER provides a set of variables' values to all its children 
+elements on the APP component. 
 More info at https://rnfirebase.io/reference/auth.
 ********************************************************************************/
   return (
     <AuthContext.Provider 
       value={{ 
         user, 
-        //update, 
-        //setUpdate 
+        update, 
+        setUpdate 
     }}>
       {children}
     </AuthContext.Provider>
-  )
+  );
 };

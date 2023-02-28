@@ -10,7 +10,7 @@ import { styles } from '../constants/Styles';
 /********************************************************************************
 BEGIN COMPONENT
 ********************************************************************************/
-export function ForgotPassword({navigation}) {
+export function ForgotPassword({ navigation }) {
 
 /********************************************************************************
 STATES
@@ -23,7 +23,7 @@ const [ email, setEmail ] = useState('');
 				barStyle='light-content' 
 				backgroundColor={colors.black}
 			/>
-      <Text>
+      <Text style={styles.regularText}>
         Preencha o campo abaixo com seu e-mail para recuperar a sua senha:
       </Text>
 			<TextInput
@@ -35,16 +35,17 @@ const [ email, setEmail ] = useState('');
 				placeholder='E-mail'
 				placeholderTextColor={colors.gray}
 				keyboardType='email-address'
+				marginTop={25}
 			/>
       <View style={{ 
         flexDirection: 'row',
-        marginTop: 60}}>
+        marginTop: 25}}>
         <Pressable 
           onPress={() => authForgotPassword(email, navigation)}
           style={styles.button}>
           <Text 
             style={styles.boldText}>
-            Recuperar senha
+            Recuperar
           </Text>
         </Pressable>
 		  </View>
