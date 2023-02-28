@@ -1,24 +1,21 @@
 /********************************************************************************
 DEPENDENCIES
 ********************************************************************************/
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { Pressable, StatusBar, Text, TextInput, View } from 'react-native';
-import AuthContext from '../components/AuthContext';
-import { authLogin } from '../functions/AuthLogin';
+import { authForgotPassword } from '../functions/AuthForgotPassword';
 import { colors } from '../constants/Colors';
 import { styles } from '../constants/Styles';
 
 /********************************************************************************
 BEGIN COMPONENT
 ********************************************************************************/
-export function Login({navigation}) {
-	const {user} = useContext(AuthContext);
+export function ForgotPassword({navigation}) {
 
 /********************************************************************************
 STATES
 ********************************************************************************/
-	const [ email, setEmail ] = useState('');
-	const [ password, setPassword ] = useState('');
+const [ email, setEmail ] = useState('');
 
 	return (
 		<View style={styles.container}>
@@ -26,6 +23,9 @@ STATES
 				barStyle='light-content' 
 				backgroundColor={colors.black}
 			/>
+      <Text>
+        Preencha o campo abaixo com seu e-mail para recuperar a sua senha:
+      </Text>
 			<TextInput
 				onChangeText={setEmail}
 				value={email}
@@ -36,47 +36,18 @@ STATES
 				placeholderTextColor={colors.gray}
 				keyboardType='email-address'
 			/>
-			<TextInput
-				onChangeText={setPassword}
-				value={password}
-				style={styles.input}
-				autoCapitalize='none'
-				autoComplete='password'
-				placeholder='Senha'
-				placeholderTextColor={colors.gray}
-				keyboardType='default'
-				secureTextEntry={true}
-			/>
       <View style={{ 
         flexDirection: 'row',
         marginTop: 60}}>
         <Pressable 
-          onPress={() => 
-						authLogin(
-							email, 
-							password, 
-							navigation)}
+          onPress={() => authForgotPassword(email, navigation)}
           style={styles.button}>
           <Text 
             style={styles.boldText}>
-            Entrar
+            Recuperar senha
           </Text>
         </Pressable>
-        <Pressable 
-          onPress={() => navigation.navigate('Register')}
-          style={styles.button}>
-          <Text 
-            style={styles.boldText}>
-            Registrar
-          </Text>
-        </Pressable>
-      </View>
-      <Pressable onPress={() => navigation.navigate('ForgotPassword')}>
-        <Text 
-					style={styles.link}>
-					Esqueceu a senha?
-				</Text>
-      </Pressable>
-		</View>
+		  </View>
+    </View>
 	);
 };

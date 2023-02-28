@@ -5,7 +5,7 @@ import { Pressable, Text, View  } from 'react-native';
 import { styles } from '../constants/Styles';
 
 /********************************************************************************
-COMPONENT
+BEGIN COMPONENT
 ********************************************************************************/
 export function Home({ navigation }) {
   return (
