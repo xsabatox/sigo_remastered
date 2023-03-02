@@ -24,7 +24,7 @@ const [ email, setEmail ] = useState('');
 				backgroundColor={colors.black}
 			/>
       <Text style={styles.regularText}>
-        Preencha o campo abaixo com seu e-mail para recuperar a sua senha:
+        Preencha o seu e-mail para recuperar a sua senha:
       </Text>
 			<TextInput
 				onChangeText={setEmail}

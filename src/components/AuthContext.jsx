@@ -29,7 +29,8 @@ More info at https://rnfirebase.io/reference/auth.
 
 /********************************************************************************
 AUTH CONTEXT PROVIDER provides a set of variables' values to all its children 
-elements on the APP component. 
+elements on the APP component. USER receives a value from Google's Firebase 
+Authentication service, which is updated with the user's first and last name.
 More info at https://rnfirebase.io/reference/auth.
 ********************************************************************************/
   return (
