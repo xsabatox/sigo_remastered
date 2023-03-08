@@ -26,8 +26,7 @@ More info at https://rnfirebase.io/reference/auth.
 ********************************************************************************/
   return (
     <NavBarContext.Provider 
-      value={{
-    }}>
+      value={{}}>
       {children}
     </NavBarContext.Provider>
   );

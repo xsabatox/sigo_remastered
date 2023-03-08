@@ -66,30 +66,3 @@ export const styles = StyleSheet.create({
     width: '40%'
   }
 });
-
-export const modalStyles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    backgroundColor: colors.black,
-    borderRadius: 25,
-    height: 350,
-    justifyContent: 'center',
-    marginTop: 'auto',
-    paddingVertical: 24,
-    width: '100%'
-  },
-
-  title:  {
-    color: colors.cyan,
-    fontFamily: 'Montserrat-Bold',
-    fontSize: 25
-  },
-
-  text:  {
-    color: colors.white,
-    fontFamily: 'Montserrat-Regular',
-    fontSize: 15,
-    marginBottom: 20,
-    textAlign: 'center'
-  }
-});

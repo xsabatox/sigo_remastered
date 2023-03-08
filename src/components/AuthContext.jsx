@@ -35,11 +35,7 @@ More info at https://rnfirebase.io/reference/auth.
 ********************************************************************************/
   return (
     <AuthContext.Provider 
-      value={{ 
-        user, 
-        update, 
-        setUpdate 
-    }}>
+      value={{user, update, setUpdate}}>
       {children}
     </AuthContext.Provider>
   );

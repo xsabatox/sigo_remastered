@@ -3,7 +3,7 @@ COMPONENT
 ********************************************************************************/
 
 /********************************************************************************
-COLORS customizes the color scheme of the APP and sets customized color names.
+COLORS customizes the app's color scheme and defines color names.
 ********************************************************************************/
 export const colors = {
     black: '#121212',

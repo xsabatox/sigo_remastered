@@ -12,6 +12,9 @@ export function Home({ navigation }) {
     <View style={styles.container}>
       <Text style={styles.regularText}>
         Home</Text>
+      <Text>
+        {displayName}
+      </Text>
       <Pressable 
         onPress={() => navigation.navigate('Login')}
         style={styles.button}>
