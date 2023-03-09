@@ -16,8 +16,8 @@ export function authLogin(email, password, navigation) {
 		.signInWithEmailAndPassword(email, password)
 		.then(() => {
 			navigation.navigate('Home');
-			//setEmail('');
-			//setPassword(''); 
+			setEmail('');
+			setPassword(''); 
 		})
 		.catch((error) => {
 			if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') 

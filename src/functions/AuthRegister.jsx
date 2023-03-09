@@ -3,7 +3,6 @@ DEPENDENCIES
 ********************************************************************************/
 import auth from '@react-native-firebase/auth';
 import { Alert } from 'react-native';
-import { resolveTripleslashReference } from 'typescript';
 import { capitalizeFirst } from './CapitalizeFirst';
 
 /********************************************************************************
@@ -33,7 +32,7 @@ export async function authRegister(firstName, lastName, email, password, confirm
         await user.updateProfile({
           displayName: fullName
         });
-      console.log(displayName);
+      await console.log(displayName);
       })
       .catch((error) => {
         if (error.code === 'auth/weak-password') 
