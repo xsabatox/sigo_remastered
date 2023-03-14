@@ -30,7 +30,7 @@ export async function authRegister(firstName, lastName, email, password, confirm
       .createUserWithEmailAndPassword(email, password)
       .then(async({user}) => {
         await user.updateProfile({
-          displayName: fullName
+          displayName: fullName,
         });
       console.log(user.displayName);
       })

@@ -8,12 +8,13 @@ import { styles } from '../constants/Styles';
 BEGIN COMPONENT
 ********************************************************************************/
 export function Home({ navigation }) {
+  
   return (
     <View style={styles.container}>
       <Text style={styles.regularText}>
         Home</Text>
       <Text>
-        {displayName}
+        {user}
       </Text>
       <Pressable 
         onPress={() => navigation.navigate('Login')}

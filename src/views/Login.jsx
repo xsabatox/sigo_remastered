@@ -1,7 +1,7 @@
 /********************************************************************************
 DEPENDENCIES
 ********************************************************************************/
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Pressable, StatusBar, Text, TextInput, View } from 'react-native';
 import { authLogin } from '../functions/AuthLogin';
 import { colors } from '../constants/Colors';
