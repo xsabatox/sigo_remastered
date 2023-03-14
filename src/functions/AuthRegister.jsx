@@ -25,12 +25,14 @@ export async function authRegister(firstName, lastName, email, password, confirm
 		return Alert.alert('Erro', 'Senhas não correspondem.');
   } else {
     const fullName = capitalizeFirst(`${firstName} ${lastName}`);
+    console.log(fullName);
     await auth()
       .createUserWithEmailAndPassword(email, password)
       .then(async({user}) => {
         await user.updateProfile({
           displayName: fullName
         });
+      console.log(user.displayName);
       })
       .catch((error) => {
         if (error.code === 'auth/weak-password') 

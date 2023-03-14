@@ -10,13 +10,7 @@ import { styles } from '../constants/Styles';
 /********************************************************************************
 BEGIN COMPONENT
 ********************************************************************************/
-export function Register({ navigation }) {
-
-	const {user} = useContext(AuthContext);
-	
-	useEffect(() => {
-		if (user) navigation.navigate('Home');
-	}, [user]);
+export function Register({ }) {
 
 /********************************************************************************
 STATES
