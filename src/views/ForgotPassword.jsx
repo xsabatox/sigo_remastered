@@ -3,7 +3,7 @@ DEPENDENCIES
 ********************************************************************************/
 import { useState } from 'react';
 import { Pressable, StatusBar, Text, TextInput, View } from 'react-native';
-import { authForgotPassword } from '../functions/AuthForgotPassword';
+import { authForgotPassword } from '../functions/authForgotPassword';
 import { colors } from '../constants/Colors';
 import { styles } from '../constants/Styles';
 
