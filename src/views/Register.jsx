@@ -10,7 +10,7 @@ import { styles } from '../constants/Styles';
 /********************************************************************************
 BEGIN COMPONENT
 ********************************************************************************/
-export function Register() {
+export function Register({ navigation }) {
 
 /********************************************************************************
 STATES
@@ -84,7 +84,8 @@ STATES
 						lastName,
 						email, 
             password, 
-            confirmPassword)}
+            confirmPassword,
+						navigation)}
         style={styles.button}>
         <Text 
           style={styles.boldText}>
