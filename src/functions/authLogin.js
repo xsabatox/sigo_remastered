@@ -9,15 +9,15 @@ AUTH LOGIN authenticates the user to the app, using Google's Firebase
 Authentication service.
 More info at https://rnfirebase.io/reference/auth.
 ********************************************************************************/
-export function authLogin(email, password, navigation) {
+export function authLogin(email, password, setEmail, setPassword, navigation) {
 	if (email === '' || password === '')
 		return Alert.alert('Preencha todos os campos para se autenticar.');
 	auth()
 		.signInWithEmailAndPassword(email, password)
 		.then(() => {
 			navigation.navigate('Home');
-			//setEmail('');
-			//setPassword(''); 
+			setEmail('');
+			setPassword(''); 
 		})
 		.catch((error) => {
 			if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') 

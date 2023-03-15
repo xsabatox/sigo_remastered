@@ -2,10 +2,10 @@
 DEPENDENCIES
 ********************************************************************************/
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Login } from '../views/Login';
-import { Register } from "../views/Register";
-import { ForgotPassword } from "../views/ForgotPassword";
-import { Home } from '../views/Home';
+import { Login } from '../screens/Login';
+import { Register } from "../screens/Register";
+import { ForgotPassword } from "../screens/ForgotPassword";
+import { Home } from '../screens/Home';
 const { Screen, Navigator } = createNativeStackNavigator();
 
 /********************************************************************************

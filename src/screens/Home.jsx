@@ -4,7 +4,7 @@ DEPENDENCIES
 import { useContext } from 'react';
 import { Pressable, Text, View  } from 'react-native';
 import { styles } from '../constants/Styles'
-import { AuthContext } from '../components/AuthContext';
+import { AuthContext } from '../contexts/AuthContext';
 
 /********************************************************************************
 BEGIN COMPONENT

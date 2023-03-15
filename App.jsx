@@ -1,8 +1,8 @@
 /********************************************************************************
 DEPENDENCIES
 ********************************************************************************/
-import { NavBarProvider } from './src/components/NavBarContext';
-import { AuthProvider } from './src/components/AuthContext';
+import { NavBarProvider } from './src/contexts/NavBarContext';
+import { AuthProvider } from './src/contexts/AuthContext';
 import { Routes } from './src/routes/index';
 
 /********************************************************************************

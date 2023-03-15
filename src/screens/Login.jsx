@@ -52,7 +52,9 @@ STATES
           onPress={() => 
 						authLogin(
 							email, 
-							password, 
+							password,
+							setEmail,
+							setPassword, 
 							navigation)}
           style={styles.button}>
           <Text 
