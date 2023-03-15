@@ -3,7 +3,7 @@ DEPENDENCIES
 ********************************************************************************/
 import auth from '@react-native-firebase/auth';
 import { Alert } from 'react-native';
-import { capitalizeFirst } from './CapitalizeFirst';
+import { capitalizeFirst } from './capitalizeFirst';
 
 /********************************************************************************
 AUTH REGISTER creates an new user passing an email and password to Google's 

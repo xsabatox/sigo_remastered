@@ -3,7 +3,7 @@ DEPENDENCIES
 ********************************************************************************/
 import { useState } from 'react';
 import { Pressable, StatusBar, Text, TextInput, View } from 'react-native';
-import { authRegister } from '../functions/AuthRegister';
+import { authRegister } from '../functions/authRegister';
 import { colors } from '../constants/Colors';
 import { styles } from '../constants/Styles';
 
